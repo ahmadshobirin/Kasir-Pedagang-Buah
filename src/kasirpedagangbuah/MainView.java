@@ -217,6 +217,11 @@ public class MainView extends javax.swing.JFrame {
             AlertBox.infoBox("Tidak Boleh lebih dari 100", "WARNING!");
             InputJumlahKilo.setText("0");
         }
+        
+        if( Integer.parseInt(InputJumlahKilo.getText()) <= 0){
+            AlertBox.infoBox("Minimal 1 QTY", "WARNING!");
+            InputJumlahKilo.setText("0");
+        }
     }//GEN-LAST:event_InputJumlahKiloKeyReleased
 
     private void AddButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AddButtonActionPerformed
@@ -250,7 +255,12 @@ public class MainView extends javax.swing.JFrame {
         DefaultTableModel model = (DefaultTableModel) Table.getModel();
         
         for (int i = 0; i < model.getRowCount(); i++) {
-            GrandTotal += Double.parseDouble(String.valueOf(model.getValueAt(i, 3)));
+            GrandTotal +=model.getValueAt(i, 3));
+            
+            
+            
+            
+//            GrandTotal += Double.parseDouble(String.valueOf(model.getValueAt(i, 3)));
         }
         
         msg += "Pembeli atas nama "+InputNamaPembeli.getText()+"\n";
