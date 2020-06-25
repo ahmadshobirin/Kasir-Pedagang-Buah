@@ -255,12 +255,7 @@ public class MainView extends javax.swing.JFrame {
         DefaultTableModel model = (DefaultTableModel) Table.getModel();
         
         for (int i = 0; i < model.getRowCount(); i++) {
-            GrandTotal +=model.getValueAt(i, 3));
-            
-            
-            
-            
-//            GrandTotal += Double.parseDouble(String.valueOf(model.getValueAt(i, 3)));
+            GrandTotal += Double.parseDouble(String.valueOf(model.getValueAt(i, 3)));
         }
         
         msg += "Pembeli atas nama "+InputNamaPembeli.getText()+"\n";
